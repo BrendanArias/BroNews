@@ -1,3 +1,3 @@
 import requests
 import streamlit as st
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup4
