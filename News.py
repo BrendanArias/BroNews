@@ -1,6 +1,10 @@
-import requests
-from bs4 import BeautifulSoup
+"""
+# Bro News: The most college way to read your news
+"""
 
+/*import requests
+from bs4 import BeautifulSoup
+ 
 def broify_text(url):
     # Get the text from the website
     response = requests.get(url)
@@ -21,3 +25,4 @@ def broify_text(url):
 # Example usage:
 url = input("Enter a URL: ")
 broify_text(url)
+*/
