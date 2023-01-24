@@ -18,8 +18,7 @@ article = soup.find('article')
 article_text = article.get_text()
 print(article_text)
 
-if article_url:
-
+if url:
     with st.spinner("Please wait while your summary is being generated..."):
 
     # Feed the summarization text to the app
