@@ -23,8 +23,9 @@ def broify():
     
     # Extract the text from the website and print it.
     text = soup.find_all("body", {"type": "article"})
-
+        text += p.text
     return text
+    
 if article_url:
     # Text generation spinner
     with st.spinner("Please wait while your summary is being generated..."):
