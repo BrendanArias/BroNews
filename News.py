@@ -8,18 +8,8 @@ import streamlit as st
 
 url = st.text_input("_Enter the url you'd like Broified_")
 
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
+def get_article(url):
+    page = requests.get(url)
+    page_soup = soup(page.content, 'html.parser')
+    print(page_soup)
 
-# Find the main article element
-article = soup.find_all('p')
-
-# Extract the text of the article
-article_text = article.get_text()
-print(article_text)
-
-if url:
-    with st.spinner("Please wait while your summary is being generated..."):
-
-    # Feed the summarization text to the app
-        st.write(article_text)
