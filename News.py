@@ -9,6 +9,6 @@ import streamlit as st
 def get_article(url):
     page = requests.get(url)
     page_soup = soup(page.content, 'html.parser')
-    print(page_soup)
+    st.write(page_soup)
 
 url = st.text_input("_Enter the url you'd like Broified_")
