@@ -23,7 +23,7 @@ def broify():
     
     # Extract the text from the website and print it.
     text = soup.find_all("body", {"type": "article"})
-        text += p.text
+    text += p.text
     return text
     
 if article_url:
