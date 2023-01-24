@@ -1,5 +1,5 @@
 import requests
-from bs4 import BeautifulSoup
+import BeautifulSoup
 
 url = "https://www.foxnews.com/politics/democratic-house-leader-hakeem-jeffries-demands-mccarthy-reappoint-schiff-swalwell-intelligence-committee"
 response = requests.get(url)
