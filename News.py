@@ -1,5 +1,5 @@
 import requests
-import BeautifulSoup4
+import BeautifulSoup as bs4
 import streamlit as st
 
 """
