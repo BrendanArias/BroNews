@@ -1,10 +1,7 @@
-import requests
 from bs4 import BeautifulSoup
+import requests
 import streamlit as st
 
-"""
-# BroNews: _For the bros, by the bros_
-"""
 url = input("Enter the url you'd like Broified")
 
 response = requests.get(url)
