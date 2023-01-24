@@ -6,9 +6,11 @@ import streamlit as st
 # BroNews: News for Bros, by Bros
 """
 
+url = st.text_input("_Enter the url you'd like Broified_")
+
 def get_article(url):
     page = requests.get(url)
     page_soup = soup(page.content, 'html.parser')
     st.write(page_soup)
-
-url = st.text_input("_Enter the url you'd like Broified_")
+    
+get_article(url)
