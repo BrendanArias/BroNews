@@ -22,8 +22,7 @@ def broify():
     soup = BeautifulSoup(response.content, "html.parser")
     
     # Extract the text from the website and print it.
-    for p in soup.find_all("p"):
-      text += p.text
+    text = soup.find_all("p")
 
 if article_url:
     # Text generation spinner
