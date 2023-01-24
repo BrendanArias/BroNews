@@ -23,4 +23,4 @@ if article_url:
     with st.spinner("Please wait while your summary is being generated..."):
 
     # Feed the summarization text to the app
-    st.write(article_text)
+        st.write(article_text)
