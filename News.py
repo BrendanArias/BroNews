@@ -7,7 +7,10 @@ import streamlit as st
 # BroNews: News for Bros, by Bros
 """
 
-url = st.text_input("_Enter the url you'd like Broified_", "https://example.com")
+url = st.text_input("_Enter the url you'd like Broified_")
+if not re.match(r'^https?://', url):
+    st.error('Invalid URL')
+    return
 
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
