@@ -1,7 +1,12 @@
 import requests
 import BeautifulSoup
+import streamlit as st
 
-url = "https://www.foxnews.com/politics/democratic-house-leader-hakeem-jeffries-demands-mccarthy-reappoint-schiff-swalwell-intelligence-committee"
+"""
+# BroNews: _For the bros, by the bros_
+"""
+url = input("Enter the url you'd like Broified")
+
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
 
