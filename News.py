@@ -1,5 +1,5 @@
 import requests
-from JetBrains import BeautifulSoup4
+import BeautifulSoup4
 import streamlit as st
 
 """
