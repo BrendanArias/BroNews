@@ -5,7 +5,8 @@ import streamlit as st
 """
 # BroNews: News for Bros, by Bros
 """
-url = st.text_input("_Enter the url you'd like Broified_")
+
+url = st.text_input("_Enter the url you'd like Broified_").strip("http://")
 
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
