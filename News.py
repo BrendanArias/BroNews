@@ -12,7 +12,7 @@ response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
 
 # Find the main article element
-article = soup.find('article')
+article = soup.find_all('p')
 
 # Extract the text of the article
 article_text = article.get_text()
