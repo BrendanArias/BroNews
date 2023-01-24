@@ -3,10 +3,10 @@ import requests
 import streamlit as st
 
 """
-# Hey
+# BroNews: News for Bros, by Bros
 """
 
-url = input("Enter the url you'd like Broified")
+url = input("_Enter the url you'd like Broified_")
 
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
