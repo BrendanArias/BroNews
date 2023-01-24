@@ -22,7 +22,7 @@ def broify():
     soup = BeautifulSoup(response.content, "html.parser")
     
     # Extract the text from the website and print it.
-    for p in soup.find_all("body", {"type": "article"})
+    for p in soup.find_all("body", {"type": "article"}):
         text += p.text
     
     return text
