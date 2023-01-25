@@ -21,8 +21,10 @@ def broify():
     # Extract the text from the website and print it.
     for p in soup.find_all("body", {"type": "article"}):
         text += p.text
-    
-    return response["choices"][0]["text"]
+   
+    # Feed the summarization text to the app
+    st.write("Alright Bro, so basically...")
+    st.write(text)
     
 if article_url:
     # Text generation spinner
@@ -30,6 +32,4 @@ if article_url:
         # Generate the summarization text
         bronews = broify()
 
-    # Feed the summarization text to the app
-    st.write("Alright Bro, so basically...")
-    st.write(bronews)
+
