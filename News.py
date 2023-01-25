@@ -30,6 +30,6 @@ if article_url:
     # Text generation spinner
     with st.spinner("Please wait while your summary is being generated..."):
         # Generate the summarization text
-        bronews = broify()
+    broify()
 
 
