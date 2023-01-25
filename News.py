@@ -13,7 +13,6 @@ import streamlit as st
 article_url = st.text_input("_Enter an article's URL:_")
 
 def broify():
-    text = "Alright Bro, so basically..."
     # Make the request and store the response.
     response = requests.get(article_url)
     
@@ -33,4 +32,5 @@ if article_url:
         bronews = broify()
 
     # Feed the summarization text to the app
+    st.write("Alright Bro, so basically...")
     st.write(bronews)
