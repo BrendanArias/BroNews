@@ -24,7 +24,7 @@ def broify():
     for p in soup.find_all("body", {"type": "article"}):
         text += p.text
     
-    return ["text"]
+    return response["text"]
     
 if article_url:
     # Text generation spinner
