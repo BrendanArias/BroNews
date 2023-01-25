@@ -12,7 +12,6 @@ import streamlit as st
 # Set the URL that you want to make a request to.
 article_url = st.text_input("_Enter an article's URL:_")
 
-
 def broify():
     text = "Alright Bro, so basically..."
     # Make the request and store the response.
@@ -25,7 +24,7 @@ def broify():
     for p in soup.find_all("body", {"type": "article"}):
         text += p.text
     
-    return text
+    return ["text"]
     
 if article_url:
     # Text generation spinner
