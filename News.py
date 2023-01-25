@@ -12,6 +12,7 @@ import streamlit as st
 article_url = st.text_input("_Enter an article's URL:_")
 
 def broify():
+    text = "Alright Bro, so basically..."
     # Make the request and store the response.
     response = requests.get(article_url)
     
@@ -19,8 +20,8 @@ def broify():
     soup = BeautifulSoup(response.content, "html.parser")
     
     # Extract the text from the website and print it.
-    for p in soup.find_all("body", {"type": "article"}):
-        text += p.text
+    for p in soup.find_all("p"):
+      text += p.text
     
     return text
     
@@ -28,7 +29,7 @@ if article_url:
     # Text generation spinner
     with st.spinner("Please wait while your summary is being generated..."):
         # Generate the summarization text
-        bronews = "Alright Bro, so basically..." + broify()
+        bronews = broify()
 
     # Feed the summarization text to the app
     st.write(bronews)
