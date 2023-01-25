@@ -14,7 +14,7 @@ article_url = st.text_input("_Enter an article's URL:_")
 
 
 def broify():
-    text = ""
+    text = "Alright Bro, so basically..."
     # Make the request and store the response.
     response = requests.get(article_url)
     
