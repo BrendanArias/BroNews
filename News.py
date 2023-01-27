@@ -83,7 +83,7 @@ if article_url:
             new_name_list += name + "?" + "/"
         new_name_list = new_name_list.split("/")
 
-        newer_text = ""
+        newer_text = "".join(new_text)
         for target in new_text:
             if target:
                 punctuation = target[-1]
@@ -91,7 +91,7 @@ if article_url:
                     new_word = "Bro"
                     new_word += punctuation
                     newer_text += new_word
-                    newer_text += ' '.join(new_text)
+                    newer_text += ' '
                 elif target in name_list:
                     newer_text += "Bro "
                 else:
