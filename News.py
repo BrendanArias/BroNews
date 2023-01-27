@@ -101,3 +101,4 @@ if article_url:
                 newer_text += target
                 newer_text += " "
 
+st.write(newer_text)
