@@ -60,6 +60,8 @@ if article_url:
                 word = "Bro's"
                 new_text += word
                 new_text += " "
+            elif word == "\n":
+                new_text += "\n"
             # Else if word is none of the above, just add it to our new text list
             else:
                 new_text += word
