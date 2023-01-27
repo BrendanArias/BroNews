@@ -27,7 +27,7 @@ if article_url:
         # Extract the text from the website and print it.
         for p in soup.find_all("p"):
             article_text += p.text
-            article_text += "  \n"
+            article_text += "  \n "
 
 
         # Split text into a list of words
@@ -101,5 +101,3 @@ if article_url:
                 newer_text += target
                 newer_text += " "
 
-st.write(newer_text)
-st.write("line 1  \n line 2  \n line 3")
