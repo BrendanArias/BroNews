@@ -26,7 +26,7 @@ if article_url:
 
         # Extract the text from the website and print it.
         for p in soup.find_all("p"):
-            article_text += p.text + "<br>"
+            article_text += p.text + "~"
 
         # Split text into a list of words
         article_text = article_text.split()
@@ -100,9 +100,8 @@ if article_url:
                 newer_text += " "
 
 for word in newer_text:
-    st.write(word)
-    if word == "<br>":
-        newer_text += "what the fuck"
+    if word == "~":
+        newer_text += "\nline"
 
                 
 st.write(newer_text)
