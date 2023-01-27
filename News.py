@@ -26,7 +26,8 @@ if article_url:
 
         # Extract the text from the website and print it.
         for p in soup.find_all("p"):
-            article_text += p.text + "                                                                                                     "
+            article_text += p.text
+            article_text += '\n'
 
 
         # Split text into a list of words
@@ -90,7 +91,7 @@ if article_url:
                     new_word = "Bro"
                     new_word += punctuation
                     newer_text += new_word
-                    newer_text += ' '
+                    newer_text += ' '.join(new_text)
                 elif target in name_list:
                     newer_text += "Bro "
                 else:
