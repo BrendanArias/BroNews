@@ -98,4 +98,4 @@ if article_url:
     # Text generation spinner
     with st.spinner("Please wait while we broify your text..."):
     # Feed the summarization text to the app
-    st.write(newer_text)
+        st.write(newer_text)
