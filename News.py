@@ -99,9 +99,7 @@ if article_url:
                 newer_text += target
                 newer_text += " "
 
-for word in newer_text:
-    if word == "~":
-        newer_text += "  /n"
+newer_text.split("~")
 
                 
 st.write(newer_text)
