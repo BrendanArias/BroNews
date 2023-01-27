@@ -101,7 +101,7 @@ if article_url:
 
 for word in newer_text:
     if word == "~":
-        newer_text += "\n"
+        newer_text += "  \n"
 
                 
 st.write(newer_text)
