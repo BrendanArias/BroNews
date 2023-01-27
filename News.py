@@ -1,14 +1,15 @@
 import streamlit as st
 import requests
 from bs4 import BeautifulSoup
+from Names import common_names
 
 # UI Text
 
 """
 # BroNews
 """
-st.markdown("News for Bros by Bros.")
-video_url = st.text_input("_:red[Enter an Article URL:]_")
+st.markdown("News for Bros made by Bros")
+video_url = st.text_input("_:blue[Enter an Article URL:]_")
 st.markdown("_Created by [Adam Gilani](https://twitter.com/adamgilani) and [Brendan Arias](https://www.linkedin.com/in/brendan-arias/)_")
 
 
@@ -35,6 +36,7 @@ def Bronews():
                                'Her', 'Her', 'Hers', 'It', 'It', 'Its', 'We', 'Us', 'Our', 'Ours', 'You', 'You', 'Your',
                                'Yours', 'They', 'Them', 'Their', 'Theirs', 'Myself', 'Yourself', 'Himself', 'Herself',
                                'Itself', 'Ourselves', 'Yourselves', 'Themselves']
+
     lower_singular_pronouns = ['me', 'my', 'mine', 'you', 'your', 'yours', 'he', 'him', 'him', 'his', 'she', 'her', 'hers',
                                'it', 'its', 'we', 'us', 'our', 'you', 'your', 'yours', 'they', 'them', 'their', 'theirs',
                                'myself', 'yourself', 'himself', 'herself', 'itself', 'ourselves', 'yourselves',
@@ -44,7 +46,7 @@ def Bronews():
     
     for word in article_text:
         # If word is an uppercase singular pronoun, change it to "Bro" then add it to new text list
-        if word in upper_singular_pronouns:
+        if word in upper_singular_pronouns or word in common_names:
             word = "Bro"
             new_text += word
             new_text += " "
@@ -105,9 +107,10 @@ def Bronews():
 
 if video_url:
     # Text generation spinner
-    with st.spinner("Please wait while your Bro News is being generated..."):
+    with st.spinner("Woah there. Hold your horses brother..."):
         # Generate the summarization text
         summary = Bronews()
     # Feed the summarization text to the app
     for paragraph in summary:
         st.write(paragraph + "\n")
+
