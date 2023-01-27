@@ -94,8 +94,8 @@ def broify():
             newer_text += target
             newer_text += " "
 
- if article_url:
-  # Text generation spinner
+if article_url:
+# Text generation spinner
     with st.spinner("Please wait while we broify your text..."):
         # Feed the summarization text to the app
         broified = broify()
