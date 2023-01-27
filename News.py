@@ -100,7 +100,7 @@ if article_url:
                 newer_text += " "
 
 for word in newer_text:
-    if word == "<br>"
+    if word == "<br>":
         word = "\n"
         newer_text += word
 
