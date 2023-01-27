@@ -11,7 +11,11 @@ st.markdown("_News by the Bros, for the Bros_")
 article_url = st.text_input("_:red[Enter an Article's URL:]_")
 st.markdown("_Created by [Brendan Arias]() & [Adam Gilani](https://twitter.com/adamgilani)_")
 
-def broify():
+if article_url:
+# Text generation spinner
+    with st.spinner("Please wait while we broify your text..."):
+        # Feed the summarization text to the app
+
     article_text = ""
 
     # Make the request and store the response.
@@ -94,9 +98,4 @@ def broify():
             newer_text += target
             newer_text += " "
 
-if article_url:
-# Text generation spinner
-    with st.spinner("Please wait while we broify your text..."):
-        # Feed the summarization text to the app
-        broified = broify()
-        st.write(broified)
+st.write(newer_text)
