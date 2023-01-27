@@ -101,7 +101,7 @@ if article_url:
 
         for word in newer_text:
             if word == "<br>":
-                newer_text += "\nline"
+                newer_text += "what the fuck"
 
                 
 st.write(newer_text)
