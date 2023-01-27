@@ -29,7 +29,7 @@ if article_url:
             article_text += p.text + "\n"
 
 
-        st.write(article_text)
+        st.markdown(article_text)
         # Split text into a list of words
         article_text = article_text.split()
 
