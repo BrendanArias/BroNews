@@ -99,9 +99,9 @@ if article_url:
                 newer_text += target
                 newer_text += " "
 
-    for word in newer_text:
-        if word == "<br>":
-            newer_text += "\nline"
+        for word in newer_text:
+            if word == "<br>":
+                newer_text += "\nline"
 
                 
 st.write(newer_text)
