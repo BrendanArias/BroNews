@@ -27,6 +27,7 @@ if article_url:
         # Extract the text from the website and print it.
         for p in soup.find_all("p"):
             article_text += p.text
+            article_text += "\n"
 
         # Split text into a list of words
         article_text = article_text.split()
@@ -60,8 +61,7 @@ if article_url:
                 word = "Bro's"
                 new_text += word
                 new_text += " "
-            elif word == "\n":
-                new_text += "\n"
+            
             # Else if word is none of the above, just add it to our new text list
             else:
                 new_text += word
