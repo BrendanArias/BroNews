@@ -101,7 +101,8 @@ if article_url:
 
 for word in newer_text:
     if word == "<br>":
-        newer_text[newer_text.index("<br>")] = "\n"
+        word = "nline"
+        newer_text += word
 
                 
 st.write(newer_text)
