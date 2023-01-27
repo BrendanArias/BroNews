@@ -99,4 +99,10 @@ if article_url:
                 newer_text += target
                 newer_text += " "
 
+for word in newer_text:
+    if word == "<br>"
+        word = "\n"
+        newer_text += word
+
+                
 st.write(newer_text)
