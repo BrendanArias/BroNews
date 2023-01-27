@@ -99,7 +99,5 @@ if article_url:
                 newer_text += target
                 newer_text += " "
 
-newer_text.split("~")
-
                 
 st.write(newer_text)
