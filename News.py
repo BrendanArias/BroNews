@@ -26,8 +26,8 @@ if article_url:
 
         # Extract the text from the website and print it.
         for p in soup.find_all("p"):
-            article_text += p.text
-            article_text += "\n\n"
+            article_text += p.text + "\n"
+
 
         # Split text into a list of words
         article_text = article_text.split()
