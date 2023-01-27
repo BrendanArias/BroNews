@@ -99,9 +99,10 @@ if article_url:
                 newer_text += target
                 newer_text += " "
 
-        for word in newer_text:
-            if word == "<br>":
-                newer_text += "what the fuck"
+for word in newer_text:
+    st.write(word)
+    if word == "<br>":
+        newer_text += "what the fuck"
 
                 
 st.write(newer_text)
